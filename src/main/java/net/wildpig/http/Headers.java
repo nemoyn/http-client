@@ -1,0 +1,28 @@
+
+package net.wildpig.http;
+
+import java.util.HashMap;
+import java.util.List;
+
+/**
+ * @FileName Headers.java
+ * @Description: 
+ *
+ * @Date Jul 7, 2015 
+ * @author YangShengJun
+ * @version 1.0
+ * 
+ */
+public class Headers extends HashMap<String, List<String>> {
+
+	private static final long serialVersionUID = 71310341388734766L;
+
+	public String getFirst(Object key) {
+		List<String> list = get(key);
+		if (list != null && list.size() > 0) {
+			return list.get(0);
+		}
+		return null;
+	}
+	
+}
